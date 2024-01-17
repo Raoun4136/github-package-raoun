@@ -11,7 +11,7 @@ export const consoleBoolean = (value: boolean) => {
 };
 
 export const consoleArray = (value: any[]) => {
-  console.log(`Console Log Array : ${value}`);
+  console.log(`Console Log Array[] : ${value}`);
 };
 
 export const consoleObject = (value: any) => {
