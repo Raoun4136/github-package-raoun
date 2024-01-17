@@ -31,5 +31,6 @@
     "prepublish": "tsc",
     "build": "tsc",
     "test": "jest"
-  }
+  },
+  "gitHead": "ef94f83c1aed76814b4dce4e214d82bb9a0b33f0"
 }
