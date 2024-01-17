@@ -21,6 +21,6 @@ jobs:
         run: npm install -g lerna
 
       - name: Publish
-        run: lerna publish --registry=https://npm.pkg.github.com/ --canary
+        run: lerna publish --registry=https://npm.pkg.github.com/ --canary --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
