@@ -29,4 +29,4 @@ jobs:
           git config --global user.email "qkrtjddh1212@naver.com"
           lerna publish --registry=https://npm.pkg.github.com/ patch --yes
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
