@@ -1,5 +1,5 @@
 {
-  "name": "@raoun-github/utils",
+  "name": "@raoun4136/utils",
   "version": "0.0.0",
   "description": "utils",
   "keywords": [
@@ -18,7 +18,7 @@
     "test": "__tests__"
   },
   "publishConfig": {
-    "@Raoun4136:registry": "https://npm.pkg.github.com"
+    "@raoun4136:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "lib"
