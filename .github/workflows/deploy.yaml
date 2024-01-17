@@ -20,11 +20,9 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      # - name: Login to GitHub Packages
-      #   run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - name: Publish
         run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           npx lerna publish from-package --yes
