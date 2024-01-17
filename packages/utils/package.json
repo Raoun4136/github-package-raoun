@@ -18,7 +18,7 @@
     "test": "__tests__"
   },
   "publishConfig": {
-    "access": "restricted"
+    "@Raoun4136:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "lib"
