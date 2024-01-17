@@ -17,16 +17,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Lerna
-        run: npm install -g lerna
+      - name: Install Dependencies
+        run: npm install
 
       - name: Add Github Token
-        run: echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}}" >> ~/.npmrc
 
       - name: Publish
         run: |
-          git config --global user.name "SeongOh Park"
-          git config --global user.email "qkrtjddh1212@naver.com"
-          lerna publish --registry=https://npm.pkg.github.com/ patch --yes
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          npx lerna publish from-package --yes
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
